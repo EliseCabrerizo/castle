@@ -6,7 +6,7 @@ var hotelInfos = [];
 var restauInfos = [];
 async function sandbox() {
 
-    for (var i = 1; i < 2 /*8*/ ; i++) {
+    for (var i = 1; i <8 ; i++) {
         var response = await fetch('https://www.relaischateaux.com/fr/update-destination-results', {
             "credentials": "include",
             "headers": {
@@ -80,7 +80,7 @@ async function telVilleRestau(url) {
 }
 
 async function URLRestauMichelin() {
-    for (var i = 1; i < 2/*35*/; i++) {
+    for (var i = 1; i < 35; i++) {
         if (i == 1) {
             var html = await request('https://restaurant.michelin.fr/restaurants/france/restaurants-1-etoile-michelin/restaurants-2-etoiles-michelin/restaurants-3-etoiles-michelin');
             var $ = cheerio.load(html);
